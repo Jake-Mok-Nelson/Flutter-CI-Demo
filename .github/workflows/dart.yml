@@ -13,8 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies
-      working-directory: Flutter-CI-Demo/default_app
       run: pub get
     - name: Run tests
-      working-directory: Flutter-CI-Demo/default_app
       run: pub run test
