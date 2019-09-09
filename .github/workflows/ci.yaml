@@ -9,7 +9,12 @@ jobs:
       image:  google/dart:latest
     steps:
     - uses: actions/checkout@v1
+    - name: OS info
+      entrypoint: bash
+      run: uname -a && uname -r
     - name: Install dependencies
+      working-directory: default_app
       run: pub get
     - name: Run tests
+      working-directory: default_app
       run: pub run test
