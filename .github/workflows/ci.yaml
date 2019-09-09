@@ -3,13 +3,10 @@ name: Flutter CI
 on: [push]
 
 jobs:
-  build:
-
-    runs-on: macOS-latest
-    
+  test:
+    runs-on: ubuntu-latest
     container:
       image:  google/dart:latest
-    
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies
