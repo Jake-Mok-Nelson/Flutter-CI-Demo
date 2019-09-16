@@ -12,13 +12,8 @@ jobs:
       with:
         java-version: '12.x'
     - name: setup_flutter
-      working-directory: ./default_app
       uses: subosito/flutter-action@v1
       with:
         channel: 'stable' 
-    - run: flutter pub get
-    - run: flutter build aot
-    # Analyze our Dart code
-    - run: flutter analyze
-    # Run our tests
-    - run: flutter test
+    - run: cd ./default_app && flutter pub get && flutter build aot && fluter analyze && flutter test
+    
