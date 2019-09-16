@@ -10,7 +10,7 @@ jobs:
       with:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
-    working-directory: default_app
+      working-directory: default_app
       with:
         channel: 'stable' 
     - run: flutter pub get
